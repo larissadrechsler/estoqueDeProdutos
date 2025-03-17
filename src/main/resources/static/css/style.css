@@ -1,0 +1,13 @@
+
+.tarefa-concluida { 
+    color: blue; 
+} 
+.tarefa-pendente { 
+    color: orange; 
+} 
+.banner { 
+    background-image: url('../images/fig-38.png'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height: 200px; 
+} 

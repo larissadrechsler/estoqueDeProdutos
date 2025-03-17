@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
+    <head> 
+        <title>Estoque</title>
+        <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
+        <!--link rel="stylesheet" th:href="@{/css/style.css}" /-->
+        <link th:href="@{/css/}+${css}+'.css'" rel="stylesheet" type="text/css"/>
+    </head> 
+    <body>
+        <header th:insert="navbar.html"></header> 
+        <h1>Lista Completa</h1> 
+        <img th:src="@{/images/fig-37.png}" height="50px"/>
+             <p>Esses é todo o seu estoque:</p>   
+             <table> 
+            <thead> 
+                <tr> 
+                    <th>ID</th> 
+                    <th>Peça</th> 
+                    <th>Tamanho</th>
+                    <th>Quantidade</th> 
+                    <th>Preço Unitário</th> 
+                </tr> 
+            </thead> 
+            <tbody> 
+                <tr th:each="produto : ${produtos}"> 
+                    <td th:text="${produto.id}"></td> 
+                    <td th:text="${produto.peca}"></td> 
+                    <td th:text="${produto.tamanho}"></td>
+                    <td th:text="${produto.quantidade}"></td>
+                    <td th:text="${produto.preco}"></td>
+                    <td> 
+                                <a th:href="@{/deletarProduto/{id}(id=${produto.id})}" class="btn btn-danger">Excluir</a> 
+                           </td> 
+                </tr> 
+            </tbody> 
+        </table>  
+        <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script> 
+        <script th:src="@{/js/script.js}"></script> 
+    </body> 
+</html> 

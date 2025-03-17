@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
+    <head> 
+        
+        <title>Cadastro de Produtos</title> 
+    </head> 
+    <body>
+        <header th:insert="navbar.html"></header> 
+        <h1>Cadastro de Produto</h1> 
+        <form th:action="@{/cadastro}" method="post"> 
+            <div> 
+                <p>ID: <input type="text" th:field="${produto.id}" /> </p> 
+                <p>Peça: <input type="text" th:field="${produto.peca}" /> </p>  
+                <p>Tamanho: <input type="text" th:field="${produto.tamanho}" /> </p>  
+                <p>Quantidade: <input type="number" th:field="${produto.quantidade}" /> </p> 
+                <p>Preço Unitário: <input type="number" th:field="${produto.preco}" /> </p>  
+            </div> 
+            <button type="submit">Enviar</button> 
+        </form> 
+    </body> 
+</html> 

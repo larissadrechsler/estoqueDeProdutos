@@ -1,0 +1,17 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
+    <head>
+        <title>Produto</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+    </head>
+    <body>
+        <header th:insert="navbar.html"></header> 
+        <h1>Produto</h1> 
+        <br/> 
+        <p>ID: <span th:text="${produto.id}" /></p> 
+        <p>Peça: <span th:text="${produto.peca}" /></p> 
+        <p>Tamanho: <span th:text="${produto.tamanho}" /></p> 
+        <p>Quantidade: <span th:text="${produto.quantidade}" /></p> 
+        <p>Preço: <span th:text="${produto.preco}" /></p> 
+    </body>
+</html>
